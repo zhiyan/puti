@@ -1,0 +1,73 @@
+header{
+	.logo{
+		background: url(./images/logo.png) no-repeat left top;
+		width: 179px;
+		height: $heightHeader;
+		float: left;
+	}
+
+	.account{
+		width: 150px;
+		height:$heightHeader;
+		background:url(./images/account.png) no-repeat center center;
+		float: right;
+		position: relative;
+		z-index: 999;
+	}
+	.account-dialog{
+		a{
+			span{
+				font-family:SimSun;
+				margin-left: 30px;
+			}
+			height: 55px;
+			width: 100%;
+			position: absolute;
+			left:0;
+			bottom:0;
+			text-align: center;
+			background-color: #4a4a4a;
+			color:#fff;
+			line-height: 55px;
+			font-family:Microsoft Yahei;
+			font-size:14px;
+		}
+		width: 307px;
+		height: 320px;
+		padding:20px 40px 0;
+		background:#fff url(../images/code.png) no-repeat center 20px;
+		position: absolute;
+		right:0;
+		top:$heightHeader;
+		border:1px solid #f3f3f3;
+	}
+
+	ul{
+		li{
+			float: left;
+		}
+		a{
+			&:hover,&.cur{
+				font-weight: bold;
+				color:#000;
+			}
+			em{
+				display: block;
+				font-style:normal;
+			}
+			span{
+				display: block;
+			}
+			text-align: center;
+			width: 120px;
+			display: block;
+			height:57px;
+			padding-top:24px;
+		}
+		list-style-type: none;
+		float: left;
+	}
+	height: $heightHeader;
+	border-bottom:1px solid #f3f3f3;
+	background:#fff;
+}

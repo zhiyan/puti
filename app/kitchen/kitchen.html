@@ -1,0 +1,29 @@
+<div class="kitchen">
+	<div class="pannel pannel-elem">
+		<div class="blocks">
+			<div class="block" ng-if="currentPage <= productPage">
+				<div class="elem" ng-repeat="one in productList">
+					<img ng-src="{{one.img}}">
+					<div class="elem-mask">
+						<p class="date">{{one.date}}</p>
+						<h6>{{one.title}}</h6>
+						<p class="desc">{{one.desc}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="block" ng-if="currentPage > productPage">
+				<a class="news" ng-repeat="one in newsList" href="#/news/{{one.id}}">
+					<ul class="date"><li>{{one.date}}</li></ul>
+					<img ng-src="{{one.img}}">
+					<h6>{{one.title}}</h6>
+					<p class="desc">{{one.desc}}</p>
+				</a>
+			</div>
+		</div>
+		<ul class="dotlist" ng-style="dotlistStyle">
+			<li ng-repeat="one in pages">
+				<a href="javascript:void(0)" ng-click="pageTo(one)" ng-class="{'active':currentPage==one}"></a>
+			</li>
+		</ul>
+	</div>
+</div>

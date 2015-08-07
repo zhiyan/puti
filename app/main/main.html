@@ -1,0 +1,14 @@
+<div class="flexslider" flexslider>
+  <ul class="slides">
+    <li ng-repeat="one in list" ng-init="slider($last)">
+      <img ng-src="{{one.url}}"/>
+    </li>
+  </ul>
+</div>
+<div class="home-bar">
+  <span class="icon-calendar"></span>
+  <input type="text">
+  <span class="icon-to"></span>
+  <input type="text">
+  <a class="btn" href=""><span>预定</span><em>&gt;</em> </a>
+</div>

@@ -1,0 +1,46 @@
+<div class="wrap" ng-controller="HeaderCtrl">
+	<a class="logo" href="#/" title="菩提谷"></a>
+	<ul>
+		<li>
+			<a href="#/about" ng-class="{'cur': active == 'about'}">
+				<em>源</em>
+				<span>About Us</span>
+			</a>
+		</li>
+		<li>
+			<a href="#/accommodation" ng-class="{'cur': active == 'accommodation'}">
+				<em>住</em>
+				<span>Accommodation</span>
+			</a>
+		</li>
+		<li>
+			<a href="#/kitchen" ng-class="{'cur': active == 'kitchen'}">
+				<em>食</em>
+				<span>Kitchen</span>
+			</a>
+		</li>
+		<li>
+			<a href="#/activity" ng-class="{'cur': active == 'activity'}">
+				<em>游</em>
+				<span>Activity</span>
+			</a>
+		</li>
+		<li>
+			<a href="#/product" ng-class="{'cur': active == 'product'}">
+				<em>物</em>
+				<span>Product</span>
+			</a>
+		</li>
+		<li>
+			<a href="#/location" ng-class="{'cur': active == 'location'}">
+				<em>如何到达</em>
+				<span>Location</span>
+			</a>
+		</li>
+	</ul>
+	<div class="account" ng-mouseenter="hoverAccount=true" ng-mouseleave="hoverAccount=false">
+		<div class="account-dialog" ng-show="hoverAccount">
+			<a href="#/book">房间预订<span>&gt;</span></a>
+		</div>
+	</div>
+</div>

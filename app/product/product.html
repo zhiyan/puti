@@ -1,0 +1,21 @@
+<div class="product">
+	<div class="pannel pannel-elem">
+		<div class="blocks">
+			<div class="block">
+				<div class="elem" ng-repeat="one in list">
+					<img ng-src="{{one.img}}">
+					<div class="elem-mask">
+						<p class="date">{{one.date}}</p>
+						<h6>{{one.title}}</h6>
+						<p class="desc">{{one.desc}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="dotlist">
+			<li ng-repeat="one in pages">
+				<a href="javascript:void(0)" ng-click="pageTo(one)" ng-class="{'active':currentPage==one}"></a>
+			</li>
+		</ul>
+	</div>
+</div>

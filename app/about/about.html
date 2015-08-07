@@ -1,0 +1,26 @@
+<div class="about">
+	<div class="pannel">
+		<div class="blocks">
+			<div class="block poem" ng-show="view==0"></div>
+			<div class="block item" ng-repeat="one in items" ng-show="view==($index+1)">
+				<dl>
+					<dt>
+						<img src="{{one.img}}">
+					</dt>
+					<dd>
+						<img src="{{one.txt}}" class="txt">
+						<p ng-repeat="v in one.desc">{{v}}<a href="{{one.url}}" class="more" ng-if="$last"></a></p>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<ul class="dotlist">
+			<li>
+				<a href="javascript:void(0)" ng-click="show(0)" ng-class="{'active':view==0}"></a>
+			</li>
+			<li ng-repeat="one in items">
+				<a href="javascript:void(0)" ng-click="show($index+1)" ng-class="{'active':view==$index+1}"></a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+// page
+$widthPage:1280px;
+
+// pannel
+$widthPannel:1210px;
+$heightPannel:635px;
+$widthItem:900px;
+
+// header
+$heightHeader:81px;
+
+// images
+$img:"./images/";
+
+
+
+
+// mixin
+@mixin dotlist{
+	li{
+		margin:20px 0;
+		display: block;
+		a{
+			&.active,&.flex-active{
+				background: #fff;
+			    cursor: default;
+			}
+			width: 11px;
+			height: 11px;
+			display: block;
+			background: #666;
+			background: rgba(255, 255, 255, 0.5);
+			cursor: pointer;
+			text-indent: -9999px;
+			-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			-o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			box-shadow: inset 0 0 3px #fff;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+		}
+	}
+	width: auto;
+	position: absolute;
+	top: 50%;
+	right: -40px;
+	margin-top:-60px;
+}
