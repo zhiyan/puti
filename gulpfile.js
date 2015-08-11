@@ -39,6 +39,7 @@ gulp.task('vendorJS', function(){
     gulp.src(['!./bower_components/**/*.min.js',
         './bower_components/**/*.js'])
         .pipe(plugins.concat('lib.js'))
+        .pipe(plugins.uglify())
         .pipe(gulp.dest('./build'));
 });
 
