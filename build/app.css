@@ -112,6 +112,9 @@ header {
 .about .poem {
   background: url(./images/poem.png) no-repeat center center; }
 
+.location .block {
+  background: #fff url(./images/location.jpg) no-repeat center center; }
+
 .article .pannel {
   padding-top: 90px;
   height: 545px !important; }

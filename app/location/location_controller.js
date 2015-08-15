@@ -12,6 +12,7 @@
     })
     .controller('LocationCtrl', function ($scope) {
       $scope.changeNav("location");
+      $scope.changeBg("mountain");
     });
 
 })();

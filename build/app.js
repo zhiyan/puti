@@ -107,23 +107,6 @@
   'use strict';
 
 
-  angular.module('view-accommodation',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/accommodation', {
-          templateUrl: 'accommodation/accommodation.html',
-          controller: 'AccommodationCtrl'
-        });
-    })
-    .controller('AccommodationCtrl', function ($scope) {
-      $scope.changeNav("accommodation");
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-activity',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -150,6 +133,23 @@
         $scope.view = index;
       }
 
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-accommodation',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/accommodation', {
+          templateUrl: 'accommodation/accommodation.html',
+          controller: 'AccommodationCtrl'
+        });
+    })
+    .controller('AccommodationCtrl', function ($scope) {
+      $scope.changeNav("accommodation");
     });
 
 })();
@@ -285,6 +285,7 @@
     })
     .controller('LocationCtrl', function ($scope) {
       $scope.changeNav("location");
+      $scope.changeBg("mountain");
     });
 
 })();
