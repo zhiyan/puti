@@ -19,9 +19,12 @@
       opacity: .8; }
     .home-bar .btn em {
       vertical-align: middle;
-      font-family: SimSun; }
+      font-family: SimSun;
+      font-style: normal;
+      margin-left: 5px; }
     .home-bar .btn span {
-      vertical-align: middle; }
+      vertical-align: middle;
+      font-family: "微软雅黑"; }
   .home-bar input {
     width: 240px;
     height: 33px;
@@ -80,29 +83,31 @@ header {
       color: #fff;
       line-height: 55px;
       font-family: Microsoft Yahei;
-      font-size: 14px; }
+      font-size: 14px;
+      letter-spacing: 6px; }
       header .account-dialog a span {
         font-family: SimSun;
         margin-left: 30px; }
   header ul {
     list-style-type: none;
-    float: left; }
+    float: left;
+    margin-left: 40px; }
     header ul li {
       float: left; }
     header ul a {
       text-align: center;
       width: 120px;
       display: block;
-      height: 57px;
-      padding-top: 24px; }
+      height: 40px;
+      padding-top: 28px; }
       header ul a:hover, header ul a.cur {
-        font-weight: bold;
         color: #000; }
       header ul a em {
         display: block;
         font-style: normal; }
       header ul a span {
-        display: block; }
+        display: block;
+        font-size: 8px; }
 
 .about .poem {
   background: url(./images/poem.png) no-repeat center center; }
@@ -307,22 +312,22 @@ html[xmlns] .flexslider .slides {
   top: 50%;
   right: -40px;
   margin-top: -60px;
-  right: 20px; }
+  right: 40px; }
   .flex-control-paging li {
     margin: 20px 0;
     display: block; }
     .flex-control-paging li a {
-      width: 11px;
-      height: 11px;
+      width: 10px;
+      height: 10px;
       display: block;
       background: #666;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.2);
       cursor: pointer;
       text-indent: -9999px;
-      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-      -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-      -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-      box-shadow: inset 0 0 3px #fff;
+      -webkit-box-shadow: inset 0 0 1px #fff;
+      -moz-box-shadow: inset 0 0 1px #fff;
+      -o-box-shadow: inset 0 0 1px #fff;
+      box-shadow: inset 0 0 1px #fff;
       -webkit-border-radius: 20px;
       -moz-border-radius: 20px;
       border-radius: 20px; }
@@ -524,17 +529,17 @@ body {
       margin: 20px 0;
       display: block; }
       .pannel .dotlist li a {
-        width: 11px;
-        height: 11px;
+        width: 10px;
+        height: 10px;
         display: block;
         background: #666;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.2);
         cursor: pointer;
         text-indent: -9999px;
-        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-        -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-        -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-        box-shadow: inset 0 0 3px #fff;
+        -webkit-box-shadow: inset 0 0 1px #fff;
+        -moz-box-shadow: inset 0 0 1px #fff;
+        -o-box-shadow: inset 0 0 1px #fff;
+        box-shadow: inset 0 0 1px #fff;
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
         border-radius: 20px; }
@@ -543,9 +548,9 @@ body {
           cursor: default; }
     .pannel .dotlist li a {
       background: none;
-      box-shadow: inset 0 0 3px #333;
-      -webkit-box-shadow: inset 0 0 3px #333;
-      -moz-box-shadow: inset 0 0 3px #333;
-      -ms-box-shadow: inset 0 0 3px #333; }
+      box-shadow: inset 0 0 1px #333;
+      -webkit-box-shadow: inset 0 0 1px #333;
+      -moz-box-shadow: inset 0 0 1px #333;
+      -ms-box-shadow: inset 0 0 1px #333; }
       .pannel .dotlist li a.active {
         background: #333; }
