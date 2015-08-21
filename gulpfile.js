@@ -36,8 +36,12 @@ gulp.task('sass', function(){
 
 gulp.task('vendorJS', function(){
     //concatenate vendor JS files
-    gulp.src(['!./bower_components/**/*.min.js',
-        './bower_components/**/*.js'])
+    gulp.src([
+            './bower_components/angular/angular.js',
+            './bower_components/angular-route/angular-route.js',
+            './bower_components/pickadate/lib/picker.js',
+            './bower_components/pickadate/lib/picker.date.js'
+        ])
         .pipe(plugins.concat('lib.js'))
         .pipe(plugins.uglify())
         .pipe(gulp.dest('./build'));
@@ -45,8 +49,12 @@ gulp.task('vendorJS', function(){
 
 gulp.task('vendorCSS', function(){
     //concatenate vendor CSS files
-    gulp.src(['!./bower_components/**/*.min.css',
-        './bower_components/**/*.css'])
+    gulp.src([
+            './bower_components/angular/angular-csp.css',
+            './bower_components/normalize-css/normalize.css',
+            './bower_components/pickadate/lib/themes/default.css',
+            './bower_components/pickadate/lib/themes/default.date.css'
+        ])
         .pipe(plugins.concat('lib.css'))
         .pipe(gulp.dest('./build'));
 });

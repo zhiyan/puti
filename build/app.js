@@ -1,6 +1,7 @@
 (function(){
 	'use strict';
 
+
 	angular.module('puti', [ 
 		'ngRoute',
 		'header',
@@ -15,11 +16,24 @@
 		'templates' 
 		])
 	  .config(function ($routeProvider) {
+
 	    $routeProvider
 	      .otherwise({
 	        redirectTo: '/'
 	      });
-	  });
+	  })
+
+
+	  $.extend($.fn.pickadate.defaults, {
+		  monthsFull: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+		  monthsShort: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+		  weekdaysFull: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+		  weekdaysShort: ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+		  format: 'yyyy-mm-dd',
+		  today: '今天',
+		  clear: '清除',
+		  close: '关闭'
+		})
 	  
 })();
 (function(){
@@ -107,6 +121,23 @@
   'use strict';
 
 
+  angular.module('view-accommodation',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/accommodation', {
+          templateUrl: 'accommodation/accommodation.html',
+          controller: 'AccommodationCtrl'
+        });
+    })
+    .controller('AccommodationCtrl', function ($scope) {
+      $scope.changeNav("accommodation");
+    });
+
+})();
+(function(){
+  'use strict';
+
+
   angular.module('view-activity',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -133,23 +164,6 @@
         $scope.view = index;
       }
 
-    });
-
-})();
-(function(){
-  'use strict';
-
-
-  angular.module('view-accommodation',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/accommodation', {
-          templateUrl: 'accommodation/accommodation.html',
-          controller: 'AccommodationCtrl'
-        });
-    })
-    .controller('AccommodationCtrl', function ($scope) {
-      $scope.changeNav("accommodation");
     });
 
 })();
@@ -303,6 +317,11 @@
     })
     .controller('MainCtrl', function ($scope,$http) {
 
+      $scope.params = {
+        "from" : "",
+        "to" : ""
+      }
+
       $scope.changeNav("");
       $scope.changeBg("");
 
@@ -312,6 +331,17 @@
               $scope.list = res.data;
             }
           })
+
+      angular.element("#js-date-from").pickadate()
+      angular.element("#js-date-to").pickadate()
+
+      // pickadate插件对angular有影响，只能用jq方式，原因待查
+      angular.element("#js-submit").on("click",function(){
+        if( !!$scope.params.from && !!$scope.params.to){
+          
+        }
+      })
+
 
       // $('.flexslider').flexslider({
       //   animation: "slide",

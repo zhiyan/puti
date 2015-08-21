@@ -12,6 +12,11 @@
     })
     .controller('MainCtrl', function ($scope,$http) {
 
+      $scope.params = {
+        "from" : "",
+        "to" : ""
+      }
+
       $scope.changeNav("");
       $scope.changeBg("");
 
@@ -21,6 +26,17 @@
               $scope.list = res.data;
             }
           })
+
+      angular.element("#js-date-from").pickadate()
+      angular.element("#js-date-to").pickadate()
+
+      // pickadate插件对angular有影响，只能用jq方式，原因待查
+      angular.element("#js-submit").on("click",function(){
+        if( !!$scope.params.from && !!$scope.params.to){
+          
+        }
+      })
+
 
       // $('.flexslider').flexslider({
       //   animation: "slide",

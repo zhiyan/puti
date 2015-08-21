@@ -16,7 +16,7 @@
   ],
   "devDependencies": {
     "angular": "~1.2.14",
-    "angular-route": "~1.2.14"
+    "angular-route": "~1.2.14",
+    "pickadate": "~3.5.6"
   }
 }
-
