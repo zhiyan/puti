@@ -1,0 +1,124 @@
+.building-bar{
+	li{
+		&.building-1{
+			&.cur,&:hover{
+				background-position: 3px -58px;
+			}
+			background-position: 3px -10px;
+		}
+		&.building-2{
+			&.cur,&:hover{
+				background-position: -47px -58px;
+			}
+			background-position: -47px -10px;
+		}
+		&.building-3{
+			&.cur,&:hover{
+				background-position: -97px -58px;
+			}
+			background-position: -97px -10px;
+		}
+		&.building-4{
+			&.cur,&:hover{
+				background-position: -147px -58px;
+			}
+			background-position: -147px -10px;
+		}
+		&.building-5{
+			&.cur,&:hover{
+				background-position: -197px -58px;
+			}
+			background-position: -197px -10px;
+		}
+		&.building-6{
+			&.cur,&:hover{
+				background-position: -247px -58px;
+			}
+			background-position: -247px -10px;
+		}
+		&.building-7{
+			&.cur,&:hover{
+				background-position: -297px -58px;
+			}
+			background-position: -297px -10px;
+		}
+		&.building-8{
+			&.cur,&:hover{
+				background-position: -348px -58px;
+			}
+			background-position: -348px -10px;
+		}
+		&.building-9{
+			&.cur,&:hover{
+				background-position: -399px -58px;
+			}
+			background-position: -399px -10px;
+		}
+		&.building-10{
+			&.cur,&:hover{
+				background-position: -450px -58px;
+			}
+			background-position: -450px -10px;
+		}
+		&.building-11{
+			&.cur,&:hover{
+				background-position: -504px -58px;
+			}
+			background-position: -504px -10px;
+		}
+		&.building-12{
+			&.cur,&:hover{
+				background-position: -560px -58px;
+			}
+			background-position: -560px -10px;
+		}
+		&.building-13{
+			&.cur,&:hover{
+				background-position: -616px -58px;
+			}
+			background-position: -616px -10px;
+		}
+		&.building-14{
+			&.cur,&:hover{
+				background-position: -668px -58px;
+			}
+			background-position: -668px -10px;
+		}
+		&.building-15{
+			&.cur,&:hover{
+				background-position: -717px -58px;
+			}
+			background-position: -717px -10px;
+			margin-right: 0;
+		}
+		margin-right: 18px;
+		cursor:pointer;
+		float: left;
+		list-style-type: none;
+		width: 35px;
+		height: 35px;
+		background:url(#{$img}building.png) no-repeat left -10px;
+	}
+	width: 782px;
+	overflow: hidden;
+	margin:20px auto;
+}
+
+.room-bar{
+	li{
+		&.cur,&:hover{
+			background-position: -115px 4px;
+		}
+		display: inline-block;
+		font-size:14px;
+		cursor:pointer;
+		color:#8e8e8e;
+		background:url(#{$img}live_dot.png) no-repeat left 4px;
+		padding-left: 15px;
+		margin-right: 25px;
+	}
+	border-bottom:1px solid #f4f4f4;
+	padding:10px 0;
+	text-align: center;
+	overflow: hidden;
+}

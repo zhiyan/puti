@@ -1,0 +1,28 @@
+{
+  "status" : 1,
+  "data" : {
+    "list" : [
+      {
+        "id" : 1,
+        "name" : "101大床房",
+        "img" : [
+          {"url" : "/images/tmp/live.jpg"},
+          {"url" : "/images/tmp/live.jpg"},
+          {"url" : "/images/tmp/live.jpg"},
+          {"url" : "/images/tmp/live.jpg"}
+        ]
+      },
+      {
+        "id" : 2,
+        "name" : "201大床房",
+        "img" : [
+          {"url" : "/images/tmp/live.jpg"},
+          {"url" : "/images/tmp/live.jpg"}
+        ]
+      }
+    ]
+  }
+}
+
+
+

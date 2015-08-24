@@ -1,1 +1,17 @@
-<h1>住</h1>
+<!-- <div class="flexslider" flexslider>
+  <ul class="slides">
+    <li ng-repeat="one in images" ng-init="slider($last)">
+      <img ng-src="{{one.url}}"/>
+    </li>
+  </ul>
+</div> -->
+
+<div id="slider-container"></div>
+
+<ul class="room-bar">
+	<li ng-repeat="one in list" ng-click="renderImages($index)" ng-class="{'cur':$index == room }">{{one.name}}</li>
+</ul>
+
+<ul class="building-bar">
+	<li ng-repeat="one in building" class="building-{{one}}" ng-class="{'cur':$index == id-1}" ng-click="setBuilding(one)"></li>
+</ul>

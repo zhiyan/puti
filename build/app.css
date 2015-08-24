@@ -173,6 +173,96 @@ header {
 .about .poem {
   background: url(./images/poem.png) no-repeat center center; }
 
+.building-bar {
+  width: 782px;
+  overflow: hidden;
+  margin: 20px auto; }
+  .building-bar li {
+    margin-right: 18px;
+    cursor: pointer;
+    float: left;
+    list-style-type: none;
+    width: 35px;
+    height: 35px;
+    background: url(./images/building.png) no-repeat left -10px; }
+    .building-bar li.building-1 {
+      background-position: 3px -10px; }
+      .building-bar li.building-1.cur, .building-bar li.building-1:hover {
+        background-position: 3px -58px; }
+    .building-bar li.building-2 {
+      background-position: -47px -10px; }
+      .building-bar li.building-2.cur, .building-bar li.building-2:hover {
+        background-position: -47px -58px; }
+    .building-bar li.building-3 {
+      background-position: -97px -10px; }
+      .building-bar li.building-3.cur, .building-bar li.building-3:hover {
+        background-position: -97px -58px; }
+    .building-bar li.building-4 {
+      background-position: -147px -10px; }
+      .building-bar li.building-4.cur, .building-bar li.building-4:hover {
+        background-position: -147px -58px; }
+    .building-bar li.building-5 {
+      background-position: -197px -10px; }
+      .building-bar li.building-5.cur, .building-bar li.building-5:hover {
+        background-position: -197px -58px; }
+    .building-bar li.building-6 {
+      background-position: -247px -10px; }
+      .building-bar li.building-6.cur, .building-bar li.building-6:hover {
+        background-position: -247px -58px; }
+    .building-bar li.building-7 {
+      background-position: -297px -10px; }
+      .building-bar li.building-7.cur, .building-bar li.building-7:hover {
+        background-position: -297px -58px; }
+    .building-bar li.building-8 {
+      background-position: -348px -10px; }
+      .building-bar li.building-8.cur, .building-bar li.building-8:hover {
+        background-position: -348px -58px; }
+    .building-bar li.building-9 {
+      background-position: -399px -10px; }
+      .building-bar li.building-9.cur, .building-bar li.building-9:hover {
+        background-position: -399px -58px; }
+    .building-bar li.building-10 {
+      background-position: -450px -10px; }
+      .building-bar li.building-10.cur, .building-bar li.building-10:hover {
+        background-position: -450px -58px; }
+    .building-bar li.building-11 {
+      background-position: -504px -10px; }
+      .building-bar li.building-11.cur, .building-bar li.building-11:hover {
+        background-position: -504px -58px; }
+    .building-bar li.building-12 {
+      background-position: -560px -10px; }
+      .building-bar li.building-12.cur, .building-bar li.building-12:hover {
+        background-position: -560px -58px; }
+    .building-bar li.building-13 {
+      background-position: -616px -10px; }
+      .building-bar li.building-13.cur, .building-bar li.building-13:hover {
+        background-position: -616px -58px; }
+    .building-bar li.building-14 {
+      background-position: -668px -10px; }
+      .building-bar li.building-14.cur, .building-bar li.building-14:hover {
+        background-position: -668px -58px; }
+    .building-bar li.building-15 {
+      background-position: -717px -10px;
+      margin-right: 0; }
+      .building-bar li.building-15.cur, .building-bar li.building-15:hover {
+        background-position: -717px -58px; }
+
+.room-bar {
+  border-bottom: 1px solid #f4f4f4;
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden; }
+  .room-bar li {
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    color: #8e8e8e;
+    background: url(./images/live_dot.png) no-repeat left 4px;
+    padding-left: 15px;
+    margin-right: 25px; }
+    .room-bar li.cur, .room-bar li:hover {
+      background-position: -115px 4px; }
+
 .location .block {
   background: #fff url(./images/location.jpg) no-repeat center center; }
 
