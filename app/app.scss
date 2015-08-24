@@ -1,6 +1,7 @@
 @import "./vars";
 @import "./main/main";
 @import "./header/header";
+@import "./order/order";
 @import "./about/about";
 @import "./accommodation/accommodation";
 @import "./activity/activity";
@@ -9,7 +10,6 @@
 @import "./article/article";
 @import "./product/product";
 @import "./libs/flexslider/flexslider";
-@import "./libs/angular-datepicker/angular-datepicker";
 
 html,body{
 	width: 100%;
@@ -41,6 +41,23 @@ body{
 	margin:0 auto;
 }
 
+
+.icon-calendar{
+	display: inline-block;
+	background:url(#{$img}homeicon.png) no-repeat left top;
+	height:35px;
+	width: 40px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+.icon-to{
+	display: inline-block;
+	background:url(#{$img}homeicon.png) no-repeat -40px top;
+	width: 30px;
+	height:35px;
+	vertical-align: middle;
+	margin:0 20px;
+}
 
 // pannel
 .pannel{

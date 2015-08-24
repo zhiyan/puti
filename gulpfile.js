@@ -40,7 +40,8 @@ gulp.task('vendorJS', function(){
             './bower_components/angular/angular.js',
             './bower_components/angular-route/angular-route.js',
             './bower_components/pickadate/lib/picker.js',
-            './bower_components/pickadate/lib/picker.date.js'
+            './bower_components/pickadate/lib/picker.date.js',
+            './bower_components/moment/moment.js',
         ])
         .pipe(plugins.concat('lib.js'))
         .pipe(plugins.uglify())

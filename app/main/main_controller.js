@@ -12,11 +12,6 @@
     })
     .controller('MainCtrl', function ($scope,$http) {
 
-      $scope.params = {
-        "from" : "",
-        "to" : ""
-      }
-
       $scope.changeNav("");
       $scope.changeBg("");
 
@@ -32,8 +27,10 @@
 
       // pickadate插件对angular有影响，只能用jq方式，原因待查
       angular.element("#js-submit").on("click",function(){
-        if( !!$scope.params.from && !!$scope.params.to){
-          
+        var from = $("#js-date-from").val(),
+            to = $("#js-date-to").val();
+        if( !!from && !!to){
+          window.location.href="#/order/"+from+"/"+to
         }
       })
 

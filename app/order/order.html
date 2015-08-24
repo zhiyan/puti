@@ -1,0 +1,32 @@
+<div class="order">
+    <div class="pannel">
+        <div class="order-head">
+        	<div class="order-filter">
+        		  <span class="icon-calendar"></span>
+        		  <span class="txt">入住时间:</span>
+				  <input type="text" id="js-date-from">
+				  <span class="txt">离店日期:</span>
+				  <input type="text" id="js-date-to">
+				  <a class="btn" href="javascript:void(0)" id="js-submit"><span>查询</span><em>&gt;</em> </a>
+        	</div>
+        </div>
+        <div class="order-body">
+        	<table>
+        		<tr ng-repeat="one in list">
+        			<td width="80">
+        				<img src="{{one.img}}">
+        			</td>
+        			<td class="title">{{one.title}}</td>
+        			<td width="160">{{one.desc}}</td>
+        			<td width="160">&yen;{{one.price}}</td>
+        			<td class="btn-td" ng-if="!one.isDisabled">
+        				<a class="btn" target="_blank" href="one.url"><span>预定</span><em>&gt;</em> </a>
+        			</td>
+        			<td class="btn-td" ng-if="one.isDisabled">
+        				<span class="btn disabled"><span>预定</span><em>&gt;</em> </span>
+        			</td>
+        		</tr>	
+        	</table>
+        </div>
+    </div>
+</div>

@@ -6,6 +6,7 @@
 		'ngRoute',
 		'header',
 		'view-main',
+		'view-order',
 		'view-article',
 		'view-product',
 		'view-about',

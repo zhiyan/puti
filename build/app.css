@@ -32,20 +32,6 @@
     padding: 0 10px;
     border: 1px solid #c4c4c4;
     vertical-align: middle; }
-  .home-bar .icon-calendar {
-    display: inline-block;
-    background: url(./images/homeicon.png) no-repeat left top;
-    height: 35px;
-    width: 40px;
-    vertical-align: middle;
-    margin-right: 20px; }
-  .home-bar .icon-to {
-    display: inline-block;
-    background: url(./images/homeicon.png) no-repeat -40px top;
-    width: 30px;
-    height: 35px;
-    vertical-align: middle;
-    margin: 0 20px; }
 
 header {
   height: 81px;
@@ -108,6 +94,81 @@ header {
       header ul a span {
         display: block;
         font-size: 8px; }
+
+.order .pannel {
+  background: #fff; }
+
+.order .btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+  font-size: 12px;
+  color: #fff;
+  background: #383838;
+  width: 120px;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 3px; }
+  .order .btn:hover {
+    opacity: .8; }
+  .order .btn em {
+    vertical-align: middle;
+    font-family: SimSun;
+    font-style: normal;
+    margin-left: 5px; }
+  .order .btn span {
+    vertical-align: middle;
+    font-family: "微软雅黑"; }
+
+.order .order-head {
+  padding: 50px 0 35px;
+  border-bottom: 1px solid #f9f9f9; }
+  .order .order-head .order-filter {
+    text-align: center; }
+    .order .order-head .order-filter span {
+      vertical-align: middle;
+      font-family: "微软雅黑"; }
+    .order .order-head .order-filter input {
+      width: 240px;
+      height: 33px;
+      line-height: 33px;
+      padding: 0 10px;
+      border: 1px solid #c4c4c4;
+      vertical-align: middle;
+      margin-right: 10px; }
+    .order .order-head .order-filter .txt {
+      margin-right: 20px; }
+
+.order .order-body table {
+  font-family: Microsoft Yahei;
+  width: 785px;
+  margin: 0 auto; }
+  .order .order-body table tr:last-child {
+    border: 0; }
+  .order .order-body table tr {
+    border-bottom: 1px solid #f9f9f9; }
+  .order .order-body table td {
+    padding: 15px 0 20px;
+    font-size: 14px;
+    color: #000; }
+  .order .order-body table img {
+    width: 63px;
+    height: 43px; }
+  .order .order-body table .title {
+    font-size: 18px;
+    font-weight: bold; }
+  .order .order-body table .btn-td {
+    text-align: right;
+    width: 125px; }
+    .order .order-body table .btn-td .btn {
+      margin: 0;
+      background: #e68d4e; }
+    .order .order-body table .btn-td .disabled {
+      background: #CCC;
+      cursor: default; }
+      .order .order-body table .btn-td .disabled:hover {
+        opacity: 1; }
 
 .about .poem {
   background: url(./images/poem.png) no-repeat center center; }
@@ -434,6 +495,22 @@ body {
 .wrap {
   width: 1280px;
   margin: 0 auto; }
+
+.icon-calendar {
+  display: inline-block;
+  background: url(./images/homeicon.png) no-repeat left top;
+  height: 35px;
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 20px; }
+
+.icon-to {
+  display: inline-block;
+  background: url(./images/homeicon.png) no-repeat -40px top;
+  width: 30px;
+  height: 35px;
+  vertical-align: middle;
+  margin: 0 20px; }
 
 .pannel {
   background: #fff;

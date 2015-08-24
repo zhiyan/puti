@@ -1,0 +1,25 @@
+{
+	"status" : 1,
+	"data" : {
+		"list" : [
+        {
+          "id" : 1,
+          "title" : "201标准大床房",
+          "desc" : "双早",
+          "img" : "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2319958607,781619405&fm=80",
+          "isDisabled" : false,
+          "url" : "http://www.baidu.com/",
+          "price" : "880"
+        },
+        {
+          "id" : 1,
+          "title" : "201标准大床房",
+          "desc" : "双早",
+          "img" : "https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2319958607,781619405&fm=80",
+          "isDisabled" : true,
+          "url" : "http://www.baidu.com/",
+          "price" : "880"
+        }
+      ]
+	}
+}

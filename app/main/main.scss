@@ -33,22 +33,7 @@
 		border:1px solid #c4c4c4;
 		vertical-align: middle;
 	}
-	.icon-calendar{
-		display: inline-block;
-		background:url(#{$img}homeicon.png) no-repeat left top;
-		height:35px;
-		width: 40px;
-		vertical-align: middle;
-		margin-right: 20px;
-	}
-	.icon-to{
-		display: inline-block;
-		background:url(#{$img}homeicon.png) no-repeat -40px top;
-		width: 30px;
-		height:35px;
-		vertical-align: middle;
-		margin:0 20px;
-	}
+	
 	clear:both;
 	margin:37px auto;
 	width: 890px;
