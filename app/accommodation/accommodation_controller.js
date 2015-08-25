@@ -21,6 +21,7 @@
       $scope.building = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
       $scope.changeNav("accommodation");
+      $scope.changeBg("");
 
       $scope.setBuilding = function( index ){
         $scope.id = index;
@@ -38,7 +39,7 @@
       }
 
       $scope.renderImages = function( index ){
-        
+
         var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one.url}}"/> </li> </ul> </div>');
 
         $scope.room = index;
