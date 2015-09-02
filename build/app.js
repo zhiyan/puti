@@ -360,7 +360,7 @@
       $scope.changeNav("");
       $scope.changeBg("");
 
-      $http.get("/data/home.json")
+      $http.get("/api/bodhi/query/home.htm")
           .success(function(res){
             if(res.status){
               $.each(res.data,function(i,v){
