@@ -17,14 +17,15 @@
 
       $http.get("/api/bodhi/query/home.htm")
           .success(function(res){
-            if(res.status){
+            var list = [];
+            if(res.ret){
               $.each(res.data,function(i,v){
-                if(!v.imgUrl || v.imgUrl === "#" ){
-                  res.data.splice(i,1);
+                console.log(v.imgUrl)
+                if(!!v.imgUrl && v.imgUrl !== "#" ){
+                  list.push(v)
                 }
               })
-              console.log(res.data)
-              $scope.list = res.data;
+              $scope.list = list;
             }
           })
 
