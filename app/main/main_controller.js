@@ -23,6 +23,7 @@
                   res.data.splice(i,1);
                 }
               })
+              console.log(res.data)
               $scope.list = res.data;
             }
           })
