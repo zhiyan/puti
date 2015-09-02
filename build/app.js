@@ -363,6 +363,11 @@
       $http.get("/data/home.json")
           .success(function(res){
             if(res.status){
+              $.each(res.data,function(i,v){
+                if(!v.imgUrl || v.imgUrl === "#" ){
+                  res.data.splice(i,1);
+                }
+              })
               $scope.list = res.data;
             }
           })
