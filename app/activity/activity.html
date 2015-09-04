@@ -7,7 +7,8 @@
 						<img src="{{one.img}}">
 					</dt>
 					<dd>
-						<img src="{{one.txt}}" class="txt">
+						<h5>{{one.txt}}</h5>
+						<h6>{{one.eng}}</h6>
 						<p ng-repeat="v in one.desc">{{v}}<a href="#/article/{{one.id}}" class="more" ng-if="$last"></a></p>
 					</dd>
 				</dl>
