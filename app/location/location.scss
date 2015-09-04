@@ -1,5 +1,13 @@
 .location{
 	.block{
-		background:#fff url(#{$img}location.jpg) no-repeat center center;
+		position: relative;
+		background:#fff url(http://7xlh9d.com1.z0.glb.clouddn.com/location_02.jpg) no-repeat 720px center;
+	}
+	.map{
+		width: 532px;
+		height: 368px;
+		position: absolute;
+		left:120px;
+		top:150px;
 	}
 }

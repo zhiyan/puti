@@ -264,7 +264,15 @@ header {
       background-position: -115px 4px; }
 
 .location .block {
-  background: #fff url(./images/location.jpg) no-repeat center center; }
+  position: relative;
+  background: #fff url(http://7xlh9d.com1.z0.glb.clouddn.com/location_02.jpg) no-repeat 720px center; }
+
+.location .map {
+  width: 532px;
+  height: 368px;
+  position: absolute;
+  left: 120px;
+  top: 150px; }
 
 .article .pannel {
   padding-top: 90px;
