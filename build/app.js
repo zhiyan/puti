@@ -329,24 +329,6 @@
   'use strict';
 
 
-  angular.module('view-location',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/location', {
-          templateUrl: 'location/location.html',
-          controller: 'LocationCtrl'
-        });
-    })
-    .controller('LocationCtrl', function ($scope) {
-      $scope.changeNav("location");
-      $scope.changeBg("mountain");
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-main',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -445,6 +427,24 @@
 
       angular.element("#js-date-from").pickadate()
       angular.element("#js-date-to").pickadate()
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-location',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/location', {
+          templateUrl: 'location/location.html',
+          controller: 'LocationCtrl'
+        });
+    })
+    .controller('LocationCtrl', function ($scope) {
+      $scope.changeNav("location");
+      $scope.changeBg("mountain");
     });
 
 })();

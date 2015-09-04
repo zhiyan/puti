@@ -78,11 +78,24 @@ body{
 		&.item{
 			dl{
 				dt{
-					min-width:492px;
-					margin-right: 50px;
+					width:532px;
+					margin-right: 95px;
 					float: left;
 				}
 				dd{
+					h5{
+						font-size:36px;
+						color:#000;
+						font-family:SimSun;
+						font-weight: bold;
+						margin:0 0 20px 0;
+					}
+					h6{
+						margin:0 0 40px 0;
+						font-family:Microsoft Yahei;
+						font-size:12px;
+						color:#842224;
+					}
 					.txt{
 						margin-top: 20px;
 						margin-bottom: 50px;
@@ -92,6 +105,7 @@ body{
 						font-size:14px;
 						line-height: 1.8;
 						margin-bottom: 30px;
+						font-family:SimSun;
 					}
 					.more{
 						display: inline-block;
@@ -218,8 +232,9 @@ body{
 	background:#fff;
 	width: $widthPannel;
 	height: $heightPannel;
+	box-shadow:3px 4px 25px rgba(0,0,0,.25);
+	-webkit-box-shadow:3px 4px 25px rgba(0,0,0,.25);
 	background:#fff;
-	background:rgba(255,255,255,.8);
 	margin:25px auto;
 	position: relative;
 }

@@ -4,6 +4,7 @@ header{
 		width: 179px;
 		height: $heightHeader;
 		float: left;
+		margin-left: 40px;
 	}
 
 	.account{
@@ -40,7 +41,7 @@ header{
 		position: absolute;
 		right:0;
 		top:$heightHeader;
-		border:1px solid #f3f3f3;
+		// border:1px solid #f3f3f3;
 	}
 
 	ul{
@@ -55,22 +56,23 @@ header{
 			em{
 				display: block;
 				font-style:normal;
+				font-size:15px;
 			}
 			span{
 				display: block;
 				font-size:8px;
 			}
 			text-align: center;
-			width: 120px;
-			display: block;
+			display: inline-block;
 			height:40px;
-			padding-top:28px;
+			margin-right: 50px;
+			padding-top:31px;
 		}
 		list-style-type: none;
 		float: left;
 		margin-left: 40px;
 	}
 	height: $heightHeader;
-	border-bottom:1px solid #f3f3f3;
+	// border-bottom:1px solid #f3f3f3;
 	background:#fff;
 }

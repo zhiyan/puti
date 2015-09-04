@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .home-bar {
   clear: both;
-  margin: 37px auto;
+  margin: 27px auto;
   width: 890px; }
   .home-bar .btn {
     display: inline-block;
@@ -35,13 +35,13 @@
 
 header {
   height: 81px;
-  border-bottom: 1px solid #f3f3f3;
   background: #fff; }
   header .logo {
     background: url(./images/logo.png) no-repeat left top;
     width: 179px;
     height: 81px;
-    float: left; }
+    float: left;
+    margin-left: 40px; }
   header .account {
     width: 150px;
     height: 81px;
@@ -56,8 +56,7 @@ header {
     background: #fff url(../images/code.png) no-repeat center 20px;
     position: absolute;
     right: 0;
-    top: 81px;
-    border: 1px solid #f3f3f3; }
+    top: 81px; }
     header .account-dialog a {
       height: 55px;
       width: 100%;
@@ -82,15 +81,16 @@ header {
       float: left; }
     header ul a {
       text-align: center;
-      width: 120px;
-      display: block;
+      display: inline-block;
       height: 40px;
-      padding-top: 28px; }
+      margin-right: 50px;
+      padding-top: 31px; }
       header ul a:hover, header ul a.cur {
         color: #000; }
       header ul a em {
         display: block;
-        font-style: normal; }
+        font-style: normal;
+        font-size: 15px; }
       header ul a span {
         display: block;
         font-size: 8px; }
@@ -606,8 +606,9 @@ body {
   background: #fff;
   width: 1210px;
   height: 635px;
+  box-shadow: 3px 4px 25px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 4px 25px rgba(0, 0, 0, 0.25);
   background: #fff;
-  background: rgba(255, 255, 255, 0.8);
   margin: 25px auto;
   position: relative; }
   .pannel.pannel-elem {
@@ -624,15 +625,26 @@ body {
     width: 1210px;
     height: 635px; }
     .pannel .block.item dl {
-      width: 900px;
+      width: 980px;
       margin: 90px auto; }
       .pannel .block.item dl dt {
-        min-width: 492px;
-        margin-right: 50px;
+        width: 532px;
+        margin-right: 95px;
         float: left; }
       .pannel .block.item dl dd {
         overflow: hidden;
         zoom: 1; }
+        .pannel .block.item dl dd h5 {
+          font-size: 36px;
+          color: #000;
+          font-family: SimSun;
+          font-weight: bold;
+          margin: 0 0 20px 0; }
+        .pannel .block.item dl dd h6 {
+          margin: 0 0 40px 0;
+          font-family: Microsoft Yahei;
+          font-size: 12px;
+          color: #842224; }
         .pannel .block.item dl dd .txt {
           margin-top: 20px;
           margin-bottom: 50px; }
@@ -640,7 +652,8 @@ body {
           color: #000;
           font-size: 14px;
           line-height: 1.8;
-          margin-bottom: 30px; }
+          margin-bottom: 30px;
+          font-family: SimSun; }
         .pannel .block.item dl dd .more {
           display: inline-block;
           width: 90px;
