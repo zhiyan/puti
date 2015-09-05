@@ -293,8 +293,8 @@
       $scope.pageTo = function( page ){
 
         $q.all([
-            $http.get("data/product.json",{"page":Math.min(page,$scope.productPage)}), 
-            $http.get("data/news.json",{"page":Math.max(page-$scope.productPage,1)})])
+            $http.get("/api/bodhi/query/product.htm",{params: {"page":Math.min(page,$scope.productPage),"type":1}}), 
+            $http.get("/api/bodhi/query/news.htm",{params: {"page":Math.max(page-$scope.productPage,1),"type":1}})])
           .then(function(res){
             var productData = res[0].data,
                 newsData = res[1].data;
