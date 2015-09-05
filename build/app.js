@@ -475,7 +475,11 @@
       $scope.pageTo = function( page ){
         $scope.currentPage = page;
         $scope.pages = [];
-        $http.get("/api/bodhi/query/product.htm",{"page":$scope.currentPage})
+        var params = {
+          "page":$scope.currentPage,
+          "type":3
+        }
+        $http.get("/api/bodhi/query/product.htm",{params:params})
              .success(function(res){
               if(res.ret){
                 $scope.list = res.data.list;
