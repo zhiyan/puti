@@ -12,7 +12,7 @@
 				</div>
 			</div>
 			<div class="block" ng-if="currentPage > productPage">
-				<a class="news" ng-repeat="one in newsList" href="#/news/{{one.id}}">
+				<a class="news" ng-repeat="one in newsList" href="#/article/{{one.id}}">
 					<ul class="date"><li>{{one.createDate}}</li></ul>
 					<img ng-src="{{one.imgUrl}}-news">
 					<h6>{{one.title}}</h6>
