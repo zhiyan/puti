@@ -18,9 +18,9 @@
       $scope.pageTo = function( page ){
         $scope.currentPage = page;
         $scope.pages = [];
-        $http.get("data/product.json",{"page":$scope.currentPage})
+        $http.get("/api/bodhi/query/product.htm",{"page":$scope.currentPage})
              .success(function(res){
-              if(res.status){
+              if(res.ret){
                 $scope.list = res.data.list;
                 for(var i = 1;i<= res.data.pageCount;i++){
                   $scope.pages.push(i);
