@@ -31,15 +31,17 @@
             var productData = res[0].data,
                 newsData = res[1].data;
 
+            console.log(productData,newsData)
+
             $scope.currentPage = page;
             $scope.pages = [];
 
-            if( productData.status ){
+            if( productData.ret ){
                 $scope.productList = productData.data.list;
                 $scope.productPage = productData.data.pageCount;
             }
 
-            if( newsData.status ){
+            if( newsData.ret ){
                 $scope.newsList = newsData.data.list;
                 $scope.newsPage = newsData.data.pageCount;
             }
