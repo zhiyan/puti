@@ -122,39 +122,6 @@
   'use strict';
 
 
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -211,6 +178,39 @@
   'use strict';
 
 
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
+    });
+
+})();
+(function(){
+  'use strict';
+
+
   angular.module('view-article',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -227,7 +227,7 @@
 
       $scope.changeBg("mountain");
 
-      var url = /^\d*$/.test($scope.id) ? "/api/bodhi/query/product.htm" : "data/article.json";
+      var url = /^\d*$/.test($scope.id) ? "/api/bodhi/query/productDetail.htm" : "data/article.json";
 
       $http.get(url,{params:{"id":$scope.id}})
            .success(function(res){
@@ -325,6 +325,31 @@
       }
 
       $scope.pageTo(1);
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-location',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/location', {
+          templateUrl: 'location/location.html',
+          controller: 'LocationCtrl'
+        });
+    })
+    .controller('LocationCtrl', function ($scope) {
+      $scope.changeNav("location");
+      $scope.changeBg("mountain");
+
+      var map = new BMap.Map("map");          // 创建地图实例  
+      var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
+      map.centerAndZoom(point, 15);   
+      var marker = new BMap.Marker(point);        // 创建标注    
+      map.addOverlay(marker);   
+      map.addControl(new BMap.NavigationControl());
     });
 
 })();
@@ -474,31 +499,6 @@
 
 })();
 
-(function(){
-  'use strict';
-
-
-  angular.module('view-location',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/location', {
-          templateUrl: 'location/location.html',
-          controller: 'LocationCtrl'
-        });
-    })
-    .controller('LocationCtrl', function ($scope) {
-      $scope.changeNav("location");
-      $scope.changeBg("mountain");
-
-      var map = new BMap.Map("map");          // 创建地图实例  
-      var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
-      map.centerAndZoom(point, 15);   
-      var marker = new BMap.Marker(point);        // 创建标注    
-      map.addOverlay(marker);   
-      map.addControl(new BMap.NavigationControl());
-    });
-
-})();
 /*
  * jQuery FlexSlider v2.5.0
  * Copyright 2012 WooThemes

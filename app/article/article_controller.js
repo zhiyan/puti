@@ -18,7 +18,7 @@
 
       $scope.changeBg("mountain");
 
-      var url = /^\d*$/.test($scope.id) ? "/api/bodhi/query/product.htm" : "data/article.json";
+      var url = /^\d*$/.test($scope.id) ? "/api/bodhi/query/productDetail.htm" : "data/article.json";
 
       $http.get(url,{params:{"id":$scope.id}})
            .success(function(res){
