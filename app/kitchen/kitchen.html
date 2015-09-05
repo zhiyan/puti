@@ -3,7 +3,7 @@
 		<div class="blocks">
 			<div class="block" ng-if="currentPage <= productPage">
 				<div class="elem" ng-repeat="one in productList">
-					<img ng-src="{{one.imgUrl}}">
+					<img ng-src="{{one.imgUrl}}-product">
 					<div class="elem-mask">
 						<p class="date">{{one.createDate}}</p>
 						<h6>{{one.title}}</h6>
@@ -14,7 +14,7 @@
 			<div class="block" ng-if="currentPage > productPage">
 				<a class="news" ng-repeat="one in newsList" href="#/news/{{one.id}}">
 					<ul class="date"><li>{{one.createDate}}</li></ul>
-					<img ng-src="{{one.imgUrl}}">
+					<img ng-src="{{one.imgUrl}}-news">
 					<h6>{{one.title}}</h6>
 					<p class="content">{{one.content}}</p>
 				</a>

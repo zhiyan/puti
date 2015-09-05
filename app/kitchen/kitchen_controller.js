@@ -31,8 +31,6 @@
             var productData = res[0].data,
                 newsData = res[1].data;
 
-            console.log(productData,newsData)
-
             $scope.currentPage = page;
             $scope.pages = [];
 
