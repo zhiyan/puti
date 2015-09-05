@@ -622,7 +622,9 @@ body {
   .pannel.pannel-elem {
     height: 700px;
     background: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none; }
     .pannel.pannel-elem .block {
       width: 120%; }
   .pannel .blocks {
