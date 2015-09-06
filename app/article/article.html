@@ -4,7 +4,7 @@
             <div class="article-item" ng-if="!article">
                 <h1 class="title">{{data.title}}</h1>
                 <p class="desc">{{data.create_date}}</p>
-                <div class="content" ng-bind-html="data.content">
+                <div class="content" ng-bind-html="data.body">
                 </div>
             </div>
             <div class="article-item article-static" ng-include="article" ng-if="article">

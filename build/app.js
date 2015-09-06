@@ -231,7 +231,7 @@
         $http.get("/api/bodhi/query/newsDetail.htm",{params:{"id":$scope.id}})
              .success(function(res){
               $scope.data = res.data;
-              $scope.data.content = $sce.trustAsHtml($scope.data.content);
+              $scope.data.body = $sce.trustAsHtml($scope.data.body);
          })
       }else{
         $scope.article = "/data/article/"+$scope.id+".html";
