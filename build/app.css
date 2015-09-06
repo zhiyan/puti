@@ -289,7 +289,7 @@ header {
 .article .pannel {
   padding-top: 90px;
   height: auto !important; }
-  .article .pannel.about1 {
+  .article .pannel.about1, .article .pannel.about2, .article .pannel.about3 {
     background: #fff url(http://7xlh9d.com1.z0.glb.clouddn.com/o_19ugdr6ki2lllfo2fg1v662ht9.jpg) no-repeat left top; }
 
 .article .block {

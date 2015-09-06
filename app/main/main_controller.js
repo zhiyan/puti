@@ -20,7 +20,6 @@
             var list = [];
             if(res.ret){
               $.each(res.data,function(i,v){
-                console.log(v.imgUrl)
                 if(!!v.imgUrl && v.imgUrl !== "#" ){
                   list.push(v)
                 }
