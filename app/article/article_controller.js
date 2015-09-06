@@ -18,13 +18,15 @@
 
       $scope.changeBg("mountain");
 
-      var url = /^\d*$/.test($scope.id) ? "/api/bodhi/query/productDetail.htm" : "data/article.json";
-
-      $http.get(url,{params:{"id":$scope.id}})
-           .success(function(res){
-            $scope.data = res.data;
-            $scope.data.content = $sce.trustAsHtml($scope.data.content);
-       })
+      if(/^\d*$/.test($scope.id)){
+        $http.get("/api/bodhi/query/productDetail.htm",{params:{"id":$scope.id}})
+             .success(function(res){
+              $scope.data = res.data;
+              $scope.data.content = $sce.trustAsHtml($scope.data.content);
+         })
+      }else{
+        $scope.article = "/data/article/"+$scope.id+".html";
+      }
 
 
 

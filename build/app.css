@@ -288,11 +288,14 @@ header {
 
 .article .pannel {
   padding-top: 90px;
-  height: 545px !important; }
+  height: auto !important; }
+  .article .pannel.about1 {
+    background: #fff url(http://7xlh9d.com1.z0.glb.clouddn.com/o_19ugdr6ki2lllfo2fg1v662ht9.jpg) no-repeat left top; }
 
 .article .block {
   overflow: auto;
-  height: 392px !important;
+  height: auto !important;
+  min-height: 500px;
   padding: 0 0 60px; }
 
 .article .article-item {
@@ -315,6 +318,9 @@ header {
   font-size: 14px;
   color: #000;
   line-height: 2; }
+
+.article .article-static p {
+  text-indent: 26px; }
 
 /*
  * jQuery FlexSlider v2.5.0
