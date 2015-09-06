@@ -15,25 +15,34 @@
 
       $scope.changeBg("mountain");
 
-      $scope.pageTo = function( page ){
-        $scope.currentPage = page;
-        $scope.pages = [];
-        var params = {
+      $scope.currentPage = 1;
+
+      $scope.params = {
           "page":$scope.currentPage,
           "type":3
         }
-        $http.get("/api/bodhi/query/news.htm",{params:params})
+
+      $scope.pages = [];
+
+      var originList = [];
+
+      $http.get("/api/bodhi/query/news.htm",{params:$scope.params})
              .success(function(res){
               if(res.ret){
-                $scope.list = res.data.list;
-                for(var i = 1;i<= res.data.pageCount;i++){
+                originList = res.data.list;
+                for(var i = 1;i<= res.data.list.length/3+1;i++){
                   $scope.pages.push(i);
                 }
+                $scope.pageTo(1);
               }
              })
-      }
 
-      $scope.pageTo(1)
+      $scope.pageTo = function( page ){
+        var start = (page-1)*3,
+            end = start+3;
+        $scope.list = originList.slice(start,end);
+        $scope.currentPage = page;
+      }
 
     }); 
 
