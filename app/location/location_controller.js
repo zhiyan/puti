@@ -14,6 +14,8 @@
       $scope.changeNav("location");
       $scope.changeBg("mountain");
 
+      $scope.currentPage = 1;
+
       var map = new BMap.Map("map");          // 创建地图实例  
       var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
       map.centerAndZoom(point, 15);   

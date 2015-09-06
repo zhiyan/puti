@@ -122,6 +122,39 @@
   'use strict';
 
 
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
+    });
+
+})();
+(function(){
+  'use strict';
+
+
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -171,39 +204,6 @@
       $scope.getData($scope.id);
 
       
-    });
-
-})();
-(function(){
-  'use strict';
-
-
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
     });
 
 })();
@@ -343,6 +343,8 @@
     .controller('LocationCtrl', function ($scope) {
       $scope.changeNav("location");
       $scope.changeBg("mountain");
+
+      $scope.currentPage = 1;
 
       var map = new BMap.Map("map");          // 创建地图实例  
       var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  

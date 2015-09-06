@@ -1,7 +1,13 @@
 .location{
-	.block{
+	.location-map-1{
 		position: relative;
 		background:#fff url(http://7xlh9d.com1.z0.glb.clouddn.com/location_02.jpg) no-repeat 720px center;
+	}
+	.location-map-2{
+		background:#fff url(http://7xlh9d.com1.z0.glb.clouddn.com/o_19ug8dbbfov1ocd1fuv1aeub4re.png) no-repeat center center;
+	}
+	.location-map-3{
+		background:#fff url(http://7xlh9d.com1.z0.glb.clouddn.com/o_19ug8d6af10tkjvufed1u45vkj9.png) no-repeat center center;
 	}
 	.map{
 		width: 532px;
@@ -9,5 +15,8 @@
 		position: absolute;
 		left:120px;
 		top:150px;
+	}
+	.dotlist{
+
 	}
 }
