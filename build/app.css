@@ -301,6 +301,8 @@ header {
 .article .article-item {
   width: 612px;
   margin: 0 auto; }
+  .article .article-item img {
+    width: 100%; }
 
 .article .title {
   font-size: 36px;
