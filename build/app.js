@@ -122,6 +122,39 @@
   'use strict';
 
 
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
+    });
+
+})();
+(function(){
+  'use strict';
+
+
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -149,9 +182,9 @@
       }
 
       $scope.getData = function(){
-        $http.get("/data/accommodation.json",{params:{"id" : $scope.id}})
+        $http.get("/api/bodhi/query/rooms.htm",{params:{"id" : $scope.id}})
         .success(function(res){
-          if(res.status){
+          if(res.ret){
             $scope.list = res.data.list || [];
             $scope.renderImages( 0 )
           }
@@ -171,39 +204,6 @@
       $scope.getData($scope.id);
 
       
-    });
-
-})();
-(function(){
-  'use strict';
-
-
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
     });
 
 })();

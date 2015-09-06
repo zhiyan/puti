@@ -29,9 +29,9 @@
       }
 
       $scope.getData = function(){
-        $http.get("/data/accommodation.json",{params:{"id" : $scope.id}})
+        $http.get("/api/bodhi/query/rooms.htm",{params:{"id" : $scope.id}})
         .success(function(res){
-          if(res.status){
+          if(res.ret){
             $scope.list = res.data.list || [];
             $scope.renderImages( 0 )
           }
