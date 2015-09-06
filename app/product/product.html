@@ -2,14 +2,12 @@
 	<div class="pannel pannel-elem">
 		<div class="blocks">
 			<div class="block">
-				<div class="elem" ng-repeat="one in list">
-					<img ng-src="{{one.imgUrl}}-product">
-					<div class="elem-mask">
-						<p class="date">{{one.createDate}}</p>
-						<h6>{{one.title}}</h6>
-						<p class="desc">{{one.content}}</p>
-					</div>
-				</div>
+				<a class="news" ng-repeat="one in list" href="#/article/{{one.id}}">
+					<ul class="date"><li>{{one.createDate}}</li></ul>
+					<img ng-src="{{one.imgUrl}}-news">
+					<h6>{{one.title}}</h6>
+					<p class="desc">{{one.content}}</p>
+				</a>
 			</div>
 		</div>
 		<ul class="dotlist">

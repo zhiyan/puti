@@ -486,7 +486,7 @@
           "page":$scope.currentPage,
           "type":3
         }
-        $http.get("/api/bodhi/query/product.htm",{params:params})
+        $http.get("/api/bodhi/query/news.htm",{params:params})
              .success(function(res){
               if(res.ret){
                 $scope.list = res.data.list;
