@@ -61,16 +61,22 @@ header{
 			span{
 				display: block;
 				font-size:8px;
+				position: absolute;
+				left:50%;
+				width: 80px;
+				margin-left:-40px;
+				text-align: center;
 			}
 			text-align: center;
 			display: inline-block;
 			height:40px;
-			margin-right: 50px;
+			margin-right: 90px;
+			position: relative;
 			padding-top:31px;
 		}
 		list-style-type: none;
 		float: left;
-		margin-left: 40px;
+		margin-left: 60px;
 	}
 	height: $heightHeader;
 	// border-bottom:1px solid #f3f3f3;

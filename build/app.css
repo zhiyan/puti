@@ -76,14 +76,15 @@ header {
   header ul {
     list-style-type: none;
     float: left;
-    margin-left: 40px; }
+    margin-left: 60px; }
     header ul li {
       float: left; }
     header ul a {
       text-align: center;
       display: inline-block;
       height: 40px;
-      margin-right: 50px;
+      margin-right: 90px;
+      position: relative;
       padding-top: 31px; }
       header ul a:hover, header ul a.cur {
         color: #000; }
@@ -93,7 +94,12 @@ header {
         font-size: 15px; }
       header ul a span {
         display: block;
-        font-size: 8px; }
+        font-size: 8px;
+        position: absolute;
+        left: 50%;
+        width: 80px;
+        margin-left: -40px;
+        text-align: center; }
 
 .order .pannel {
   background: #fff; }
