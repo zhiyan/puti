@@ -122,39 +122,6 @@
   'use strict';
 
 
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -211,6 +178,39 @@
   'use strict';
 
 
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
+    });
+
+})();
+(function(){
+  'use strict';
+
+
   angular.module('view-article',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -228,7 +228,7 @@
       $scope.changeBg("mountain");
 
       if(/^\d*$/.test($scope.id)){
-        $http.get("/api/bodhi/query/productDetail.htm",{params:{"id":$scope.id}})
+        $http.get("/api/bodhi/query/newsDetail.htm",{params:{"id":$scope.id}})
              .success(function(res){
               $scope.data = res.data;
               $scope.data.content = $sce.trustAsHtml($scope.data.content);

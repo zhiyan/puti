@@ -19,7 +19,7 @@
       $scope.changeBg("mountain");
 
       if(/^\d*$/.test($scope.id)){
-        $http.get("/api/bodhi/query/productDetail.htm",{params:{"id":$scope.id}})
+        $http.get("/api/bodhi/query/newsDetail.htm",{params:{"id":$scope.id}})
              .success(function(res){
               $scope.data = res.data;
               $scope.data.content = $sce.trustAsHtml($scope.data.content);
