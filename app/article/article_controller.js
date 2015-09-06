@@ -21,6 +21,7 @@
       if(/^\d*$/.test($scope.id)){
         $http.get("/api/bodhi/query/newsDetail.htm",{params:{"id":$scope.id}})
              .success(function(res){
+              res.data.body = res.data.body.replace(/.jpg/g,".jpg-article")
               $scope.data = res.data;
               $scope.data.body = $sce.trustAsHtml($scope.data.body);
          })
