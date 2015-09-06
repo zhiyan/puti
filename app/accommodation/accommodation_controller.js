@@ -40,7 +40,7 @@
 
       $scope.renderImages = function( index ){
 
-        var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}"/> </li> </ul> </div>');
+        var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}-home"/> </li> </ul> </div>');
 
         $scope.room = index;
         $scope.images = $scope.list[index].imgList;

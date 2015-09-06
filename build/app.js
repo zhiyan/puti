@@ -122,39 +122,6 @@
   'use strict';
 
 
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -193,7 +160,7 @@
 
       $scope.renderImages = function( index ){
 
-        var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}"/> </li> </ul> </div>');
+        var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}-home"/> </li> </ul> </div>');
 
         $scope.room = index;
         $scope.images = $scope.list[index].imgList;
@@ -204,6 +171,39 @@
       $scope.getData($scope.id);
 
       
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
     });
 
 })();
@@ -250,6 +250,28 @@
 
 })();
 'common service goes here';
+(function(){
+  'use strict';
+
+
+  angular.module('header',[])
+    .controller('HeaderCtrl', function ($scope) {
+
+      $scope.hoverAccount = false;
+
+      $scope.active = "";
+
+      $scope.$on("changeNav",function(event,nav){
+        $scope.active = nav || "";
+      })
+
+      // $scope.setHeader = function( menu ){
+      //   $scope.active = menu;
+      // }
+
+    });
+
+})();
 (function(){
   'use strict';
 
@@ -319,28 +341,6 @@
             $scope.pageTo(1)
 
           })
-    });
-
-})();
-(function(){
-  'use strict';
-
-
-  angular.module('header',[])
-    .controller('HeaderCtrl', function ($scope) {
-
-      $scope.hoverAccount = false;
-
-      $scope.active = "";
-
-      $scope.$on("changeNav",function(event,nav){
-        $scope.active = nav || "";
-      })
-
-      // $scope.setHeader = function( menu ){
-      //   $scope.active = menu;
-      // }
-
     });
 
 })();
