@@ -91,6 +91,23 @@
 			background-position: -717px -10px;
 			margin-right: 0;
 		}
+		span{
+			position: absolute;
+			width: 100%;
+			height:26px;
+			line-height: 26px;
+			text-align: center;
+			left:0;
+			top:28px;
+			font-size:12px;
+			font-family:"Mocrosoft Yahei";
+			display: none;
+		}
+		&.cur,&:hover{
+			span{
+				display: block;
+			}
+		}
 		margin-right: 18px;
 		cursor:pointer;
 		float: left;
@@ -98,6 +115,8 @@
 		width: 35px;
 		height: 35px;
 		background:url(#{$img}building.png) no-repeat left -10px;
+		position: relative;
+		margin-bottom: 40px;
 	}
 	width: 782px;
 	overflow: hidden;

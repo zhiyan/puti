@@ -190,7 +190,9 @@ header {
     list-style-type: none;
     width: 35px;
     height: 35px;
-    background: url(./images/building.png) no-repeat left -10px; }
+    background: url(./images/building.png) no-repeat left -10px;
+    position: relative;
+    margin-bottom: 40px; }
     .building-bar li.building-1 {
       background-position: 3px -10px; }
       .building-bar li.building-1.cur, .building-bar li.building-1:hover {
@@ -252,6 +254,19 @@ header {
       margin-right: 0; }
       .building-bar li.building-15.cur, .building-bar li.building-15:hover {
         background-position: -717px -58px; }
+    .building-bar li span {
+      position: absolute;
+      width: 100%;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      left: 0;
+      top: 28px;
+      font-size: 12px;
+      font-family: "Mocrosoft Yahei";
+      display: none; }
+    .building-bar li.cur span, .building-bar li:hover span {
+      display: block; }
 
 .room-bar {
   border-bottom: 1px solid #f4f4f4;
