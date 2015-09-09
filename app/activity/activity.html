@@ -1,23 +1,12 @@
 <div class="activity">
 	<div class="pannel">
 		<div class="blocks">
-			<div class="block item" ng-repeat="one in items" ng-show="view==($index)">
-				<dl>
-					<dt>
-						<img ng-src="{{one.img}}">
-					</dt>
-					<dd>
-						<h5>{{one.txt}}</h5>
-						<h6>{{one.eng}}</h6>
-						<p ng-repeat="v in one.desc">{{v}}<a href="#/article/{{one.id}}" class="more" ng-if="$last"></a></p>
-					</dd>
-				</dl>
-			</div>
+			<div class="block activity-block-one"></div>
 		</div>
-		<ul class="dotlist">
+		<!-- <ul class="dotlist">
 			<li ng-repeat="one in items">
 				<a href="javascript:void(0)" ng-click="show($index)" ng-class="{'active':view==$index}"></a>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </div>

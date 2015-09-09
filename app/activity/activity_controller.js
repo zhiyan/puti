@@ -16,17 +16,17 @@
 
       $scope.changeBg("mountain");
 
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
+      // $http.get("data/about.json")
+      //      .success(function(res){
+      //       $scope.items = res.list;
+      // })
 
 
-      $scope.view = 0;
+      // $scope.view = 0;
 
-      $scope.show = function(index){
-        $scope.view = index;
-      }
+      // $scope.show = function(index){
+      //   $scope.view = index;
+      // }
 
     });
 
