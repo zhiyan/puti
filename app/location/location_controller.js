@@ -16,12 +16,15 @@
 
       $scope.currentPage = 1;
 
-      var map = new BMap.Map("map");          // 创建地图实例  
-      var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
-      map.centerAndZoom(point, 15);   
-      var marker = new BMap.Marker(point);        // 创建标注    
-      map.addOverlay(marker);   
-      map.addControl(new BMap.NavigationControl());
+      if( !!BMap ){
+        var map = new BMap.Map("map");          // 创建地图实例  
+        var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
+        map.centerAndZoom(point, 15);   
+        var marker = new BMap.Marker(point);        // 创建标注    
+        map.addOverlay(marker);   
+        map.addControl(new BMap.NavigationControl());
+      }
+
     });
 
 })();
