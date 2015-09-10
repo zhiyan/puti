@@ -122,39 +122,6 @@
   'use strict';
 
 
-  angular.module('view-activity',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/activity', {
-          templateUrl: 'activity/activity.html',
-          controller: 'ActivityCtrl'
-        });
-    })
-    .controller('ActivityCtrl', function ($scope,$http) {
-
-      $scope.changeNav("activity");
-
-      $scope.changeBg("mountain");
-
-      // $http.get("data/about.json")
-      //      .success(function(res){
-      //       $scope.items = res.list;
-      // })
-
-
-      // $scope.view = 0;
-
-      // $scope.show = function(index){
-      //   $scope.view = index;
-      // }
-
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-accommodation',['ngRoute'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -186,24 +153,70 @@
         .success(function(res){
           if(res.ret){
             $scope.list = res.data.list || [];
-            $scope.renderImages( 0 )
+            if($scope.list.length){
+              $scope.renderImages( 0 )
+            }else{
+              $scope.renderImages(null,true)
+            }
           }
         })
       }
 
-      $scope.renderImages = function( index ){
+      $scope.renderImages = function( index, empty ){
 
-        var sliderTpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}-home"/> </li> </ul> </div>');
+        var tpl,
+            $container = angular.element("#slider-container");
 
-        $scope.room = index;
-        $scope.images = $scope.list[index].imgList;
-        
-        angular.element("#slider-container").html(sliderTpl($scope));
+        if(!empty){
+          tpl = $compile('<div class="flexslider" flexslider> <ul class="slides"> <li ng-repeat="one in images" ng-init="slider($last)"> <img ng-src="{{one}}-home"/> </li> </ul> </div>');
+
+          $scope.room = index;
+          $scope.images = $scope.list[index].imgList;
+          
+          $container.html(tpl($scope));
+        }else{
+          tpl = '<div class="room-empty">暂无房型，敬请期待</div>';
+          $container.html(tpl)
+        }
+
       }
 
       $scope.getData($scope.id);
 
       
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-activity',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/activity', {
+          templateUrl: 'activity/activity.html',
+          controller: 'ActivityCtrl'
+        });
+    })
+    .controller('ActivityCtrl', function ($scope,$http) {
+
+      $scope.changeNav("activity");
+
+      $scope.changeBg("mountain");
+
+      // $http.get("data/about.json")
+      //      .success(function(res){
+      //       $scope.items = res.list;
+      // })
+
+
+      // $scope.view = 0;
+
+      // $scope.show = function(index){
+      //   $scope.view = index;
+      // }
+
     });
 
 })();
