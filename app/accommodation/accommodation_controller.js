@@ -16,7 +16,7 @@
     })
     .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile) {
 
-      $scope.id = $routeParams.id || 1;
+      $scope.id = $routeParams.id || 5;
 
       $scope.building = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 
