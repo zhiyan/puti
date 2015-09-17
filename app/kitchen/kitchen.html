@@ -20,9 +20,30 @@
 				</a>
 			</div>
 		</div>
-		<ul class="dotlist" ng-style="dotlistStyle">
-			<li ng-repeat="one in pages">
-				<a href="javascript:void(0)" ng-click="pageTo(one)" ng-class="{'active':currentPage==one}"></a>
+		
+		<ul class="dotlist_season" ng-style="dotlistStyle">
+			<li>
+				<div class="dotlist_title">食·单</div>
+			</li>
+			<li >
+				<a href="javascript:void(0)" ng-click="pageTo(1)" ng-class="{'active':currentPage==1}">春</a>
+			</li>
+			<li >
+				<a href="javascript:void(0)" ng-click="pageTo(2)" ng-class="{'active':currentPage==2}">夏</a>
+			</li>
+			<li >
+				<a href="javascript:void(0)" ng-click="pageTo(3)" ng-class="{'active':currentPage==3}">秋</a>
+			</li>
+			<li >
+				<a href="javascript:void(0)" ng-click="pageTo(4)" ng-class="{'active':currentPage==4}">冬</a>
+			</li>
+		</ul>
+		<ul class="dotlist_food_news" ng-style="dotlistStyle">
+			<li>
+				<div class="dotlist_title">食·事</div>
+			</li>
+			<li ng-repeat="one in newsPages">
+				<a href="javascript:void(0)" ng-click="pageTo(one+4)" ng-class="{'active':currentPage==(one+4)}">{{$index+1}}</a>
 			</li>
 		</ul>
 	</div>

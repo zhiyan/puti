@@ -16,7 +16,7 @@
       $scope.changeBg("mountain");
 
       $scope.pages = [];
-
+      $scope.newsPages = [];
 
       $scope.productPage = 1;
       $scope.newsPage = 1;
@@ -52,6 +52,7 @@
             if( productData.ret ){
                 originProductList = productData.data.list;
                 $scope.productPage = Math.ceil(productData.data.list.length/6);
+                $scope.productPage = 4;
             }
 
             if( newsData.ret ){
@@ -62,6 +63,10 @@
             for(var i = 1;i<=$scope.newsPage+$scope.productPage;i++){
               $scope.pages.push(i);
             }
+            for(var i = 1;i<=$scope.newsPage;i++){
+              $scope.newsPages.push(i);
+            }
+            
             $scope.dotlistStyle = {"margin-top":-31*$scope.pages.length/2-20+"px"}
 
             $scope.pageTo(1)

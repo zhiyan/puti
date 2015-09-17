@@ -2,7 +2,7 @@
   'use strict';
 
 
-  angular.module('view-accommodation',['ngRoute'])
+  angular.module('view-accommodation',['ngRoute', 'ngDialog'])
     .config(function ($routeProvider) {
       $routeProvider
         .when('/accommodation', {
@@ -14,7 +14,7 @@
         //   controller: 'AccommodationCtrl'
         // });
     })
-    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile) {
+    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile, ngDialog) {
 
       $scope.id = $routeParams.id || 5;
 
@@ -26,7 +26,17 @@
       $scope.setBuilding = function( index ){
         $scope.id = index;
         $scope.getData();
+        // $scope.title = "一号楼 丨 菩提谷彩虹店";
+        // $scope.content = "菩提谷建设团队花了一年多时间，投入很大的精力和物力，在窑头山脚下做了一个“样板房”，因地处彩虹谷，称为“菩提谷”彩虹店。建设过程中，尽量保留了建筑本来的面貌，同时基本不会为了房屋去干预自然环境。大量应用土夯墙、石地板等当地材料。室内装修没有一滴油漆。所有一切的目的就是减少城市生活的痕迹。";
+        // ngDialog.open({
+        //    template: 'accommodation/buildingTemplate.html' ,
+				// 		className: 'ngdialog-theme-default ngdialog-theme-custom',
+        //     scope: $scope
+        //    });
+
       }
+
+      var timeOut;
 
       $scope.getData = function(){
         $http.get("/api/bodhi/query/rooms.htm",{params:{"id" : $scope.id}})
@@ -39,7 +49,40 @@
               $scope.renderImages(null,true)
             }
           }
-        })
+        });
+        clearTimeout(timeOut);
+        timeOut = setTimeout(function(){
+            $http.get("/api/bodhi/query//buildingDetail.htm",{params:{"id" : $scope.id}})
+          .success(function(res){
+            if(res.ret){
+              $scope.title = res.data.title;
+              $scope.content = res.data.content;
+              ngDialog.open({
+                template: 'accommodation/buildingTemplate.html' ,
+                  className: 'ngdialog-theme-default ngdialog-theme-custom',
+                  scope: $scope
+                });
+            }
+            else{
+                $scope.title = "一号楼 丨 菩提谷彩虹店";
+                $scope.content = "菩提谷建设团队花了一年多时间，投入很大的精力和物力，在窑头山脚下做了一个“样板房”，因地处彩虹谷，称为“菩提谷”彩虹店。建设过程中，尽量保留了建筑本来的面貌，同时基本不会为了房屋去干预自然环境。大量应用土夯墙、石地板等当地材料。室内装修没有一滴油漆。所有一切的目的就是减少城市生活的痕迹。";
+                ngDialog.open({
+                  template: 'accommodation/buildingTemplate.html' ,
+                    className: 'ngdialog-theme-default ngdialog-theme-custom',
+                    scope: $scope
+                  });
+            }
+          })
+          .error(function(){
+                $scope.title = "一号楼 丨 菩提谷彩虹店";
+                $scope.content = "菩提谷建设团队花了一年多时间，投入很大的精力和物力，在窑头山脚下做了一个“样板房”，因地处彩虹谷，称为“菩提谷”彩虹店。建设过程中，尽量保留了建筑本来的面貌，同时基本不会为了房屋去干预自然环境。大量应用土夯墙、石地板等当地材料。室内装修没有一滴油漆。所有一切的目的就是减少城市生活的痕迹。";
+                ngDialog.open({
+                  template: 'accommodation/buildingTemplate.html' ,
+                    className: 'ngdialog-theme-default ngdialog-theme-custom',
+                    scope: $scope
+                  });
+          })
+        }, 200);
       }
 
       $scope.renderImages = function( index, empty ){

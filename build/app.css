@@ -291,8 +291,12 @@ header {
   font-size: 24px;
   width: 100%; }
 
-.activity .activity-block-one {
-  background: url(http://7xlh9d.com1.z0.glb.clouddn.com/o_19upec98f2ui17mj1sva1ths1fqfg.jpg) no-repeat center center; }
+.activity .location-activity-1 {
+  position: relative;
+  background: #fff url(http://7xlh9d.com1.z0.glb.clouddn.com/2.jpg) no-repeat center center; }
+
+.activity .location-activity-2 {
+  background: #fff url(http://7xlh9d.com1.z0.glb.clouddn.com/1.jpg) no-repeat center center; }
 
 .location .location-map-1 {
   position: relative;
@@ -825,3 +829,159 @@ body {
       -ms-box-shadow: inset 0 0 1px #333; }
       .pannel .dotlist li a.active {
         background: #333; }
+  .pannel .dotlist_season {
+    width: auto;
+    position: absolute;
+    top: 40%;
+    right: -40px;
+    margin-top: -60px; }
+    .pannel .dotlist_season li {
+      margin: 20px 0;
+      display: block; }
+      .pannel .dotlist_season li a {
+        width: 10px;
+        height: 10px;
+        display: block;
+        background: #666;
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        text-indent: -9999px;
+        -webkit-box-shadow: inset 0 0 1px #fff;
+        -moz-box-shadow: inset 0 0 1px #fff;
+        -o-box-shadow: inset 0 0 1px #fff;
+        box-shadow: inset 0 0 1px #fff;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px; }
+        .pannel .dotlist_season li a.active, .pannel .dotlist_season li a.flex-active {
+          background: #fff;
+          cursor: default; }
+    .pannel .dotlist_season li a {
+      background: none;
+      box-shadow: inset 0 0 1px #333;
+      -webkit-box-shadow: inset 0 0 1px #333;
+      -moz-box-shadow: inset 0 0 1px #333;
+      -ms-box-shadow: inset 0 0 1px #333; }
+      .pannel .dotlist_season li a.active {
+        background: #333; }
+  .pannel .dotlist_food_news {
+    width: auto;
+    position: absolute;
+    top: 75%;
+    right: -40px;
+    margin-top: -60px; }
+    .pannel .dotlist_food_news li {
+      margin: 20px 0;
+      display: block; }
+      .pannel .dotlist_food_news li a {
+        width: 10px;
+        height: 10px;
+        display: block;
+        background: #666;
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        text-indent: -9999px;
+        -webkit-box-shadow: inset 0 0 1px #fff;
+        -moz-box-shadow: inset 0 0 1px #fff;
+        -o-box-shadow: inset 0 0 1px #fff;
+        box-shadow: inset 0 0 1px #fff;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px; }
+        .pannel .dotlist_food_news li a.active, .pannel .dotlist_food_news li a.flex-active {
+          background: #fff;
+          cursor: default; }
+    .pannel .dotlist_food_news li a {
+      background: none;
+      box-shadow: inset 0 0 1px #333;
+      -webkit-box-shadow: inset 0 0 1px #333;
+      -moz-box-shadow: inset 0 0 1px #333;
+      -ms-box-shadow: inset 0 0 1px #333; }
+      .pannel .dotlist_food_news li a.active {
+        background: #333; }
+
+.ngdialog.ngdialog-theme-custom {
+  padding-top: 125px;
+  padding-bottom: 125px; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-overlay {
+  background: rgba(100, 100, 100, 0.5); }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-content {
+  background: white;
+  padding: 1.8em 2em;
+  width: 440px;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message h2 {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-family: Times,"宋体"; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message div, .ngdialog.ngdialog-theme-custom .ngdialog-message code {
+  font-family: Times,"宋体"; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message {
+  font-size: 16px;
+  font-family: Times,"宋体";
+  line-height: 22px; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-message ul {
+  padding: 0 0 5px 35px;
+  font-family: Times,"宋体"; }
+
+.ngdialog.ngdialog-theme-custom .ngdialog-button.ngdialog-button-primary {
+  background: #27ae60;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
+.flex-control-paging li a {
+  width: 16px;
+  height: 16px;
+  text-indent: 5px;
+  font-size: 80%; }
+
+.pannel .dotlist li a {
+  width: 16px;
+  height: 16px;
+  text-indent: 5px;
+  font-size: 80%; }
+
+.dotlist_season {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  margin: 0;
+  padding: 0 4px;
+  background: rgba(100, 100, 100, 0.1); }
+
+.dotlist_food_news {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  margin: 0;
+  padding: 0 4px;
+  background: rgba(100, 100, 100, 0.1); }
+
+.pannel .dotlist_season li a {
+  width: 16px;
+  height: 16px;
+  text-indent: 1px;
+  font-size: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+.pannel .dotlist_food_news li a {
+  width: 16px;
+  height: 16px;
+  text-indent: 5px;
+  font-size: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.dotlist_title {
+  marigin: 0;
+  font-size: 60%; }

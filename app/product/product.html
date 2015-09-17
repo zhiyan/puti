@@ -12,7 +12,7 @@
 		</div>
 		<ul class="dotlist">
 			<li ng-repeat="one in pages">
-				<a href="javascript:void(0)" ng-click="pageTo(one)" ng-class="{'active':currentPage==one}"></a>
+				<a href="javascript:void(0)" ng-click="pageTo(one)" ng-class="{'active':currentPage==one}">{{$index+1}}</a>
 			</li>
 		</ul>
 	</div>

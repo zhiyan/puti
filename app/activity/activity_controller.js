@@ -16,6 +16,7 @@
 
       $scope.changeBg("mountain");
 
+      $scope.currentPage = 1;
       // $http.get("data/about.json")
       //      .success(function(res){
       //       $scope.items = res.list;

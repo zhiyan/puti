@@ -41,6 +41,7 @@ gulp.task('vendorJS', function(){
             './bower_components/angular-route/angular-route.js',
             './bower_components/pickadate/lib/picker.js',
             './bower_components/pickadate/lib/picker.date.js',
+            './bower_components/ngDialog/js/ngDialog.js',
             './bower_components/moment/moment.js',
         ])
         .pipe(plugins.concat('lib.js'))
@@ -54,7 +55,11 @@ gulp.task('vendorCSS', function(){
             './bower_components/angular/angular-csp.css',
             './bower_components/normalize-css/normalize.css',
             './bower_components/pickadate/lib/themes/default.css',
-            './bower_components/pickadate/lib/themes/default.date.css'
+            './bower_components/pickadate/lib/themes/default.date.css',
+            './bower_components/ngDialog/css/ngDialog-theme-default.css',
+            './bower_components/ngDialog/css/ngDialog-theme-plain.css',
+            './bower_components/ngDialog/css/ngDialog-custom-width.css',
+            './bower_components/ngDialog/css/ngDialog.css'
         ])
         .pipe(plugins.concat('lib.css'))
         .pipe(gulp.dest('./build'));

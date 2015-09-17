@@ -17,10 +17,10 @@
 		</div>
 		<ul class="dotlist">
 			<li>
-				<a href="javascript:void(0)" ng-click="show(0)" ng-class="{'active':view==0}"></a>
+				<a href="javascript:void(0)" ng-click="show(0)" ng-class="{'active':view==0}">1</a>
 			</li>
 			<li ng-repeat="one in items">
-				<a href="javascript:void(0)" ng-click="show($index+1)" ng-class="{'active':view==$index+1}"></a>
+				<a href="javascript:void(0)" ng-click="show($index+1)" ng-class="{'active':view==$index+1}">{{$index+2}}</a>
 			</li>
 		</ul>
 	</div>
