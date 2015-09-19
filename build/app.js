@@ -82,46 +82,6 @@
   'use strict';
 
 
-  angular.module('view-about',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/about', {
-          templateUrl: 'about/about.html',
-          controller: 'AboutCtrl'
-        })
-        .when('/about/:id', {
-          templateUrl: 'about/aboutDetail.html',
-          controller: 'AboutDetailCtrl'
-        });
-    })
-    .controller('AboutCtrl', function ($scope,$http) {
-
-      $scope.changeNav("about");
-
-      $scope.changeBg("mountain");
-
-      $http.get("data/about.json")
-           .success(function(res){
-            $scope.items = res.list;
-           })
-
-
-      $scope.view = 0;
-
-      $scope.show = function(index){
-        $scope.view = index;
-      }
-
-    })
-     .controller('AboutDetailCtrl', function ($scope) {
-      $scope.changeNav("about");
-    });
-
-})();
-(function(){
-  'use strict';
-
-
   angular.module('view-accommodation',['ngRoute', 'ngDialog'])
     .config(function ($routeProvider) {
       $routeProvider
@@ -134,7 +94,7 @@
         //   controller: 'AccommodationCtrl'
         // });
     })
-    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile, ngDialog) {
+    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile, ngDialog, $sce) {
 
       $scope.id = $routeParams.id || 5;
 
@@ -176,7 +136,7 @@
           .success(function(res){
             if(res.ret){
               $scope.title = res.data.title;
-              $scope.content = res.data.content;
+              $scope.content = $sce.trustAsHtml(res.data.content);
               ngDialog.open({
                 template: 'accommodation/buildingTemplate.html' ,
                   className: 'ngdialog-theme-default ngdialog-theme-custom',
@@ -227,6 +187,46 @@
       $scope.getData($scope.id);
 
       
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-about',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/about', {
+          templateUrl: 'about/about.html',
+          controller: 'AboutCtrl'
+        })
+        .when('/about/:id', {
+          templateUrl: 'about/aboutDetail.html',
+          controller: 'AboutDetailCtrl'
+        });
+    })
+    .controller('AboutCtrl', function ($scope,$http) {
+
+      $scope.changeNav("about");
+
+      $scope.changeBg("mountain");
+
+      $http.get("data/about.json")
+           .success(function(res){
+            $scope.items = res.list;
+           })
+
+
+      $scope.view = 0;
+
+      $scope.show = function(index){
+        $scope.view = index;
+      }
+
+    })
+     .controller('AboutDetailCtrl', function ($scope) {
+      $scope.changeNav("about");
     });
 
 })();
@@ -306,7 +306,6 @@
     });
 
 })();
-'common service goes here';
 (function(){
   'use strict';
 
@@ -406,35 +405,7 @@
     });
 
 })();
-(function(){
-  'use strict';
-
-
-  angular.module('view-location',['ngRoute'])
-    .config(function ($routeProvider) {
-      $routeProvider
-        .when('/location', {
-          templateUrl: 'location/location.html',
-          controller: 'LocationCtrl'
-        });
-    })
-    .controller('LocationCtrl', function ($scope) {
-      $scope.changeNav("location");
-      $scope.changeBg("mountain");
-
-      $scope.currentPage = 1;
-      if( typeof BMap !== "undefined" ){
-        var map = new BMap.Map("map");          // 创建地图实例  
-        var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
-        map.centerAndZoom(point, 15);   
-        var marker = new BMap.Marker(point);        // 创建标注    
-        map.addOverlay(marker);   
-        map.addControl(new BMap.NavigationControl());
-      }
-
-    });
-
-})();
+'common service goes here';
 (function(){
   'use strict';
 
@@ -538,6 +509,35 @@
 
       angular.element("#js-date-from").pickadate()
       angular.element("#js-date-to").pickadate()
+    });
+
+})();
+(function(){
+  'use strict';
+
+
+  angular.module('view-location',['ngRoute'])
+    .config(function ($routeProvider) {
+      $routeProvider
+        .when('/location', {
+          templateUrl: 'location/location.html',
+          controller: 'LocationCtrl'
+        });
+    })
+    .controller('LocationCtrl', function ($scope) {
+      $scope.changeNav("location");
+      $scope.changeBg("mountain");
+
+      $scope.currentPage = 1;
+      if( typeof BMap !== "undefined" ){
+        var map = new BMap.Map("map");          // 创建地图实例  
+        var point = new BMap.Point(119.739643,30.409025);  // 创建点坐标  
+        map.centerAndZoom(point, 15);   
+        var marker = new BMap.Marker(point);        // 创建标注    
+        map.addOverlay(marker);   
+        map.addControl(new BMap.NavigationControl());
+      }
+
     });
 
 })();

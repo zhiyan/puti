@@ -14,7 +14,7 @@
         //   controller: 'AccommodationCtrl'
         // });
     })
-    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile, ngDialog) {
+    .controller('AccommodationCtrl', function ($scope,$http,$routeParams,$compile, ngDialog, $sce) {
 
       $scope.id = $routeParams.id || 5;
 
@@ -56,7 +56,7 @@
           .success(function(res){
             if(res.ret){
               $scope.title = res.data.title;
-              $scope.content = res.data.content;
+              $scope.content = $sce.trustAsHtml(res.data.content);
               ngDialog.open({
                 template: 'accommodation/buildingTemplate.html' ,
                   className: 'ngdialog-theme-default ngdialog-theme-custom',
